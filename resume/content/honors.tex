@@ -1,7 +1,16 @@
 %-------------------------------------------------------------------------------
 %	SECTION TITLE
 %-------------------------------------------------------------------------------
-\cvsection{Accomplishments}
+\cvsection{
+  \begin{tikzfadingfrompicture}[name = fading letter3]
+    \node[text = transparent!0, inner xsep = 0pt, outer xsep = 0pt] {Accomplishments};
+  \end{tikzfadingfrompicture}%
+  \begin{tikzpicture}[baseline = (textnode.base)]
+    \node[inner sep = 0pt, outer sep = 0pt] (textnode) {\phantom{Accomplishments}};
+    \shade[path fading = fading letter3, fading text, left color = awesome-darkred, right color = text, middle color = text, fit fading = false]
+    (textnode.south west) rectangle (textnode.north east);% 
+  \end{tikzpicture}%
+}
 
 
 %-------------------------------------------------------------------------------
@@ -13,21 +22,18 @@
   \cvhonor
     {RETComputers} % Award
     {Created electronics reselling company that netted over \$8,000 in the first three months} % Event
-    {} % Location
     {2016} % Date(s)
 
 %---------------------------------------------------------
   \cvhonor
     {Rondevoo} % Award
-    {Co-founded company that won second place at Northeastern competition and featured in Bostinno} % Event
-    {} % Location
+    {Co-founded company that won second place at Northeastern startup competition and featured in Bostinno} % Event
     {2015} % Date(s)
 
 %---------------------------------------------------------
   \cvhonor
     {Eagle Scout} % Award
     {Achieved Order of the Arrow and Kevin Hanley Award} % Event
-    {} % Location
     {2013} % Date(s)
 
 %---------------------------------------------------------

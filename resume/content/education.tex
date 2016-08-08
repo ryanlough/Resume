@@ -1,7 +1,17 @@
 %-------------------------------------------------------------------------------
 %	SECTION TITLE
 %-------------------------------------------------------------------------------
-\cvsection{Education}
+\cvsection{
+  \begin{tikzfadingfrompicture}[name = fading letter1]
+    \node[text = transparent!0, inner xsep = 0pt, outer xsep = 0pt] {Education};
+  \end{tikzfadingfrompicture}%
+  \begin{tikzpicture}[baseline = (textnode.base)]
+    \node[inner sep = 0pt, outer sep = 0pt] (textnode) {\phantom{Education}}; 
+    \shade[path fading = fading letter1, fading text, left color = awesome-darkred, right color = text, fit fading = false]
+    (textnode.south west) rectangle (textnode.north east);% 
+  \end{tikzpicture}%
+}
+
 
 
 %-------------------------------------------------------------------------------
@@ -11,15 +21,16 @@
 
 %---------------------------------------------------------
   \cventry
-    {B.S. in Computer Science / Minor in Computer Engineering} % Degree
-    {Northeastern University, Boston, MA} % Institution
-    {Sept. 2013 - Present} % Location
-    {Expected Graduation: May 2018} % Date(s)
+    {Candidate for a Bachelor of Science in Computer Science / Minor in Computer Engineering} % Degree
+    {Northeastern University - Expected Graduation: May 2018 \newline College of Computer and Information Science} % Institution
+    {Boston, MA} % Location
+    {Sept. 2013 - Present} % Date(s)
     {
       \begin{cvitems} % Description(s) bullet points
-        \item {Current GPA: 3.7}
-        \item {Relevant Coursework: Networks \& Distributed Systems, Algorithms \& Data, Theory of Computation, Object Oriented Design, Robotics, Linear Algebra, Computer Systems, Logic \& Computation, Discrete Structures}
-        \item {Activities: Tutor for CS 3500 - Object Oriented Design, CCIS P2P Mentor, NUACM, Entrepreneurship Club, Husky Hunt Team Captain}
+        \item {Current GPA: 3.7 / 4.0}
+        \item {Relevant Coursework: Artificial Intelligence, Software Development, Statistics \& Stochastic Processes, Networks \& Distributed Systems,\\
+            \hspace*{2.95cm} Algorithms \& Data, Theory of Computation, Object Oriented Design, Robotics, Linear Algebra, Computer Systems}
+        \item {Activities: Tutor for CS 3500 - Object Oriented Design, CCIS P2P Mentor, NUACM, Entrepreneurship Club, Ski Club, Husky Hunt Team Captain}
         \item {Honors: Recipient of merit-based Excellence Scholarship, Dean's List}
       \end{cvitems}
     }
