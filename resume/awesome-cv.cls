@@ -79,29 +79,12 @@
 \RequirePackage{parskip}
 % Needed to deal hyperlink
 \RequirePackage[hidelinks]{hyperref}
-% Needed to add gradient
-\RequirePackage{tikz}
-\usetikzlibrary{fadings}
 \hypersetup{%
   pdftitle={},
   pdfauthor={},
   pdfsubject={},
   pdfkeywords={}
 }
-
-\tikzset{fading text/.style={}}
-
-\newcommand{\fadingtext}[2]{%
-  \begin{tikzfadingfrompicture}[name = fading letter]
-    \node[text = transparent!0, inner xsep = 0pt, outer xsep = 0pt] {#2};
-  \end{tikzfadingfrompicture}%
-  \begin{tikzpicture}[baseline = (textnode.base)]
-    \node[inner sep = 0pt, outer sep = 0pt] (textnode) {\phantom{#2}}; 
-    \shade[path fading = fading letter, fading text, #1, fit fading = false]
-    (textnode.south west) rectangle (textnode.north east);% 
-  \end{tikzpicture}% 
-}
-
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -168,6 +151,16 @@
 % Awesome section color
 \def\@sectioncolor#1#2#3{%
   \ifbool{acvSectionColorHighlight}{{\color{awesome}#1#2#3}}{#1#2#3}%
+}
+
+\definecolor{g1}{HTML}{B02A1b}
+\definecolor{g2}{HTML}{9A2518}
+\definecolor{g3}{HTML}{841F14}
+\definecolor{g4}{HTML}{6E1A11}
+\definecolor{g5}{HTML}{58150E}
+% Awesome section color
+\def\@sectiongradientcolor#1#2#3#4{%
+  \ifbool{acvSectionColorHighlight}{{\color{g1}#1\color{g2}#2\color{g3}#3\color{g4}#4}}{#1#2#3#4}%
 }
 
 
@@ -238,7 +231,7 @@
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}{#1}}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectiongradientcolor #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 

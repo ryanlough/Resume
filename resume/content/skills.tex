@@ -1,16 +1,7 @@
 %-------------------------------------------------------------------------------
 %	SECTION TITLE
 %-------------------------------------------------------------------------------
-\cvsection{
-  \begin{tikzfadingfrompicture}[name = fading letter5]
-    \node[text = transparent!0, inner xsep = 0pt, outer xsep = 0pt] {Computer Knowledge};
-  \end{tikzfadingfrompicture}%
-  \begin{tikzpicture}[baseline = (textnode.base)]
-    \node[inner sep = 0pt, outer sep = 0pt] (textnode) {\phantom{Computer Knowledge}};
-    \shade[path fading = fading letter5, fading text, left color = awesome-darkred, right color = text, middle color = text, fit fading = false]
-    (textnode.south west) rectangle (textnode.north east);% 
-  \end{tikzpicture}%
-}
+\cvsection{Computer Knowledge}
 
 
 %-------------------------------------------------------------------------------
