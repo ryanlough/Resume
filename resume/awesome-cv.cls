@@ -159,8 +159,8 @@
 \definecolor{g4}{HTML}{6E1A11}
 \definecolor{g5}{HTML}{58150E}
 % Awesome section color
-\def\@sectiongradientcolor#1#2#3#4{%
-  \ifbool{acvSectionColorHighlight}{{\color{g1}#1\color{g2}#2\color{g3}#3\color{g4}#4}}{#1#2#3#4}%
+\def\@sectiongradientcolor#1#2#3{%
+  \ifbool{acvSectionColorHighlight}{{\color{g1}#1\color{g3}#2\color{g5}#3}}{#1#2#3}%
 }
 
 
