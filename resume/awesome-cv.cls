@@ -21,7 +21,7 @@
 %-------------------------------------------------------------------------------
 %                Identification
 %-------------------------------------------------------------------------------
-\ProvidesClass{awesome-cv}[2016/01/30 v1.5 Awesome Curriculum Vitae Class]
+\ProvidesClass{awesome-cv}
 \NeedsTeXFormat{LaTeX2e}
 
 
@@ -33,7 +33,6 @@
 % geometry and fancyhdr)
 %-------------------------------------------------------------------------------
 % Options for draft or final
-\DeclareOption{draft}{\setlength\overfullrule{5pt}}
 \DeclareOption{final}{\setlength\overfullrule{0pt}}
 % Inherit options of article
 \DeclareOption*{%
@@ -154,9 +153,7 @@
 }
 
 \definecolor{g1}{HTML}{B02A1b}
-\definecolor{g2}{HTML}{9A2518}
 \definecolor{g3}{HTML}{841F14}
-\definecolor{g4}{HTML}{6E1A11}
 \definecolor{g5}{HTML}{58150E}
 % Awesome section color
 \def\@sectiongradientcolor#1#2#3{%
@@ -598,7 +595,7 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 1.5cm}}
 }{%
     \end{tabular*}
   \end{center}
@@ -616,7 +613,7 @@
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l L{\textwidth * \real{0.9}}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l L{\textwidth * \real{0.865}}}
 }{%
     \end{tabular*}
   \end{center}
